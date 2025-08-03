@@ -55,17 +55,23 @@
     title: title,
   )
 
-  set text(size: 25pt, font: "Inter 24pt")
+  set text(size: 25pt, font: "Inter 24pt", fill: flavors.mocha.colors.text.rgb)
 
   set page(
     paper: "presentation-16-9",
     margin: (
       left: 50pt,
       right: 0pt,
-      top: 0pt,
-      bottom: 0pt,
+      top: 50pt,
+      bottom: 50pt,
     ),
   )
+
+  show heading.where(level: 1): set text(size: 30pt, weight: 500)
+  show heading.where(level: 2): set text(size: 25pt, weight: 500)
+  show heading.where(level: 3): set text(size: 20pt, weight: 500)
+
+  set text(size: 16pt)
 
   body
 }

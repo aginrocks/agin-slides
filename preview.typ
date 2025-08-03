@@ -5,6 +5,7 @@
 #title-slide(
   title: "Agin Slides",
   subtitle: "A Catppuccin theme for creating presentations with Typst",
+  image: "image.jpg",
 )
 
 #section-slide("Introduction", subtitle: "What is Agin Slides?")

@@ -76,14 +76,14 @@
   body
 }
 
-#let title-slide(title: str, subtitle: none) = {
+#let title-slide(title: str, subtitle: none, image: none) = {
   show heading.where(level: 1): set text(size: 60pt, weight: 500)
 
   page[
     #set align(horizon)
     #stack(
       dir: ltr,
-      block(width: 370pt)[
+      block(width: if image != none { 370pt } else { auto })[
         #show heading: set par(leading: 0.5em)
         #heading(
           level: 1,
@@ -92,7 +92,9 @@
           #text(fill: flavors.mocha.colors.mauve.rgb, size: 20pt, weight: 500)[#subtitle]
         ]
       ],
-      pill("image.jpg"),
+      if image != none {
+        pill(image)
+      },
     )
   ]
 }

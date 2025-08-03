@@ -82,8 +82,8 @@
         #heading(
           level: 1,
         )[= #title]
-        #block(above: 40pt)[
-          #text(fill: flavors.mocha.colors.mauve.rgb, size: 20pt)[#subtitle]
+        #block(above: 35pt)[
+          #text(fill: flavors.mocha.colors.mauve.rgb, size: 20pt, weight: 500)[#subtitle]
         ]
       ],
       pill("image.jpg"),
@@ -119,7 +119,7 @@
             )[= #title]
             #if subtitle != none {
               block(above: 10pt)[
-                #text(fill: flavors.mocha.colors.mauve.rgb, size: 16pt)[#subtitle]
+                #text(fill: flavors.mocha.colors.mauve.rgb, size: 16pt, weight: 500)[#subtitle]
               ]
             }
           ],

@@ -61,15 +61,18 @@
     paper: "presentation-16-9",
     margin: (
       left: 50pt,
-      right: 0pt,
+      right: 50pt,
       top: 50pt,
       bottom: 50pt,
     ),
   )
 
-  show heading.where(level: 1): set text(size: 30pt, weight: 500)
-  show heading.where(level: 2): set text(size: 25pt, weight: 500)
-  show heading.where(level: 3): set text(size: 20pt, weight: 500)
+  show heading.where(level: 1): set text(size: 40pt, weight: 600)
+  show heading: set block(below: 0.75em)
+
+  show heading.where(level: 2): set text(size: 30pt, weight: 500)
+
+  show heading.where(level: 3): set text(size: 25pt, weight: 500)
 
   set text(size: 16pt)
 
@@ -78,6 +81,17 @@
 
 #let title-slide(title: str, subtitle: none, image: none) = {
   show heading.where(level: 1): set text(size: 60pt, weight: 500)
+  show heading: set block(below: 0.54em)
+
+  set page(
+    paper: "presentation-16-9",
+    margin: (
+      left: 50pt,
+      right: 0pt,
+      top: 50pt,
+      bottom: 50pt,
+    ),
+  )
 
   page[
     #set align(horizon)
@@ -101,6 +115,7 @@
 
 #let section-slide(title, subtitle: none) = {
   show heading.where(level: 1): set text(size: 40pt, weight: 600)
+  show heading: set block(below: 0.54em)
 
   context {
     section_counter.update(n => n + 1)
